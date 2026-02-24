@@ -81,7 +81,7 @@ body {
 .order-btn:hover,
 .order-btn:focus {
     background: #ffb347;
-    color: #e67e22;
+    color: #2d1a07;
 }
 
 /* Banner */
@@ -111,7 +111,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(44, 22, 7, 0.18);
+    background: rgba(44, 22, 7, 0.50);
     z-index: 2;
 }
 
@@ -130,17 +130,18 @@ body {
     font-weight: 900;
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 8px #2d1a07, 0 0 2px #ffffff;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
-.banner-word.orange { color: #11c24c; }
+.banner-word.orange { color: #ffb347; }
 .banner-word.white { color: #fff; }
 
 .banner-text p {
     font-size: 1.3rem;
-    color: #ffbb00;
+    color: #ffffff;
     margin-top: 0.5rem;
-    text-shadow: 2px 2px 6px #000000;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
 }
 
 /* banner buttons and accent removed (not used in markup) */
@@ -195,7 +196,7 @@ body {
 .action-btn {
     display: inline-block;
     background: #e67e22;
-    color: #fff;
+    color: #2d1a07;
     font-size: 1rem;
     font-weight: bold;
     padding: 0.5rem 1.2rem;
@@ -227,11 +228,11 @@ body {
 
 .food-card:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 6px 24px rgba(44,22,7,0.18); }
 
-.food-card h3 {
+food-card h3 {
     text-align: center;
     width: 100%;
     margin: 0.5rem 0 0.2rem 0;
-    color: #11c24c;
+    color: #2d1a07;
     font-size: 1.1rem;
     font-weight: bold;
 }
@@ -277,7 +278,7 @@ body {
 .contact-form input,
 .contact-form textarea { flex: 1; width: auto; min-width: 0; }
 
-.contact-form label { align-self: flex-start; font-weight: bold; color: #e67e22; }
+.contact-form label { align-self: flex-start; font-weight: bold; color: #2d1a07; }
 
 .contact-form input,
 .contact-form textarea {
@@ -301,7 +302,7 @@ body {
 .location-section,
 .contact-section { background: #e67e22; color: rgba(44,22,7,1); }
 
-.featured-foods h2 { color: #11c24c; margin-bottom: 0.7rem; }
+.featured-foods h2 { color: #2d1a07; margin-bottom: 0.7rem; }
 .location-section h2,
 .contact-section h2 { color: #2d1a07; margin-bottom: 0.7rem; }
 
