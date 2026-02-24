@@ -136,13 +136,6 @@ body {
 .banner-word.orange { color: #e67e22; }
 .banner-word.white { color: #fff; }
 
-.banner-text .accent {
-    color: #e67e22;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-left: 0.5rem;
-}
-
 .banner-text p {
     font-size: 1.3rem;
     color: #fff;
@@ -150,23 +143,7 @@ body {
     text-shadow: 1px 1px 6px #2d1a07;
 }
 
-.banner-buttons { display: flex; gap: 1rem; margin-top: 1.5rem; }
-
-.banner-btn {
-    background: #e67e22;
-    color: #2d1a07;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    border: none;
-    box-shadow: 0 2px 8px rgba(44,22,7,0.15);
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.banner-btn:hover,
-.banner-btn:focus { background: #d35400; color: #2d1a07; }
+/* banner buttons and accent removed (not used in markup) */
 
 /* Featured Foods */
 .featured-foods {
@@ -211,15 +188,7 @@ body {
 
 .gallery-img:hover { opacity: 0.9; }
 
-.food-gallery figcaption {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    color: #2d1a07;
-    background: #f7c59f;
-    padding: 0.3rem 0.7rem;
-    border-radius: 6px;
-    text-align: center;
-}
+/* figure captions not used in HTML; removed */
 
 .featured-actions { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
 
@@ -262,17 +231,9 @@ body {
     text-align: center;
     width: 100%;
     margin: 0.5rem 0 0.2rem 0;
-    color: #e67e22;
+    color: #df6e0c;
     font-size: 1.1rem;
     font-weight: bold;
-}
-
-.food-card figcaption {
-    margin-top: 0.5rem;
-    font-size: 1.08rem;
-    color: #e67e22;
-    font-weight: bold;
-    text-align: center;
 }
 
 .food-rich-desc {
@@ -338,7 +299,7 @@ body {
 
 /* Utilities and Section Backgrounds */
 .location-section,
-.contact-section { background: #e67e22; color: #fff; }
+.contact-section { background: #e67e22; color: rgba(44,22,7,1); }
 
 .featured-foods h2 { color: #e67e22; margin-bottom: 0.7rem; }
 .location-section h2,
@@ -349,7 +310,7 @@ body {
 .location-section label,
 .contact-section label,
 .location-section h3,
-.contact-section h3 { color: #fff; }
+.contact-section h3 { color: rgba(44,22,7,1); }
 
 .location-section,
 .contact-section {
