@@ -429,12 +429,44 @@ footer {
         top: 0;
     }
     .nav-overlay { display: none; }
-    #nav-toggle:checked ~ .nav-overlay {
+    /* Single-label overlay: keep the visible hamburger/X visually anchored by fixing
+       the inner span; use the label's ::before as a full-screen clickable overlay
+       when the menu is open so clicks outside close the menu. */
+    .nav-toggle-label { position: relative; }
+    .nav-toggle-label span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: #e67e22;
+        border-radius: 2px;
+        position: fixed;
+        top: 18px;
+        right: 20px;
+        z-index: 13;
+    }
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 28px;
+        height: 3px;
+        background: #e67e22;
+        border-radius: 2px;
+    }
+    .nav-toggle-label span::before { top: -8px; }
+    .nav-toggle-label span::after  { top: 8px; }
+
+    .nav-toggle-label::before { content: ""; display: none; }
+    #nav-toggle:checked ~ .nav-toggle-label::before {
         display: block;
         position: fixed;
         inset: 0;
-        z-index: 10; 
+        z-index: 10; /* beneath the menu (11) but above page content */
         background: transparent;
     }
-    .nav-toggle-label { z-index: 12; }
+    /* transform the lines into an X while keeping the visible element anchored */
+    #nav-toggle:checked ~ .nav-toggle-label span { background: transparent; }
+    #nav-toggle:checked ~ .nav-toggle-label span::before { transform: rotate(45deg); top: 0; }
+    #nav-toggle:checked ~ .nav-toggle-label span::after { transform: rotate(-45deg); top: 0; }
 }
