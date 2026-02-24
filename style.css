@@ -54,7 +54,7 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: #e67e22;
+    color: #2d1a07;
     font-weight: bold;
     font-size: 1rem;
     padding: 0.5rem 1rem;
@@ -154,7 +154,7 @@ body {
 
 .banner-btn {
     background: #e67e22;
-    color: #fff;
+    color: #2d1a07;
     font-size: 1.1rem;
     font-weight: bold;
     padding: 0.8rem 2rem;
@@ -166,7 +166,7 @@ body {
 }
 
 .banner-btn:hover,
-.banner-btn:focus { background: #d35400; color: #fff; }
+.banner-btn:focus { background: #d35400; color: #2d1a07; }
 
 /* Featured Foods */
 .featured-foods {
@@ -178,7 +178,7 @@ body {
 }
 
 .featured-foods h2 {
-    color: #e67e22;
+    color: #2d1a07;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -237,7 +237,7 @@ body {
 }
 
 .action-btn:hover,
-.action-btn:focus { background: #e67e22; color: #fff; }
+.action-btn:focus { background: #e67e22; color: #2d1a07; }
 
 /* Food Cards */
 .food-card {
@@ -342,7 +342,7 @@ body {
 
 .featured-foods h2 { color: #e67e22; margin-bottom: 0.7rem; }
 .location-section h2,
-.contact-section h2 { color: #fff; margin-bottom: 0.7rem; }
+.contact-section h2 { color: #2d1a07; margin-bottom: 0.7rem; }
 
 .location-section p,
 .contact-section p,
