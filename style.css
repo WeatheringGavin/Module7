@@ -40,7 +40,7 @@ body {
 .restaurant-name {
     font-family: 'Gochi Hand', cursive, Arial, sans-serif;
     font-size: 1.7rem;
-    color: #e67e22;
+    color: #d35400;
     text-shadow: 1px 1px 2px #fff5e1;
 }
 
@@ -54,7 +54,7 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: #ffb347;
+    color: #e67e22;
     font-weight: bold;
     font-size: 1rem;
     padding: 0.5rem 1rem;
@@ -133,11 +133,11 @@ body {
     text-shadow: 2px 2px 8px #2d1a07, 0 0 2px #000;
 }
 
-.banner-word.orange { color: #ffb347; }
+.banner-word.orange { color: #e67e22; }
 .banner-word.white { color: #fff; }
 
 .banner-text .accent {
-    color: #ffb347;
+    color: #e67e22;
     font-size: 2.5rem;
     font-weight: 700;
     margin-left: 0.5rem;
@@ -153,8 +153,8 @@ body {
 .banner-buttons { display: flex; gap: 1rem; margin-top: 1.5rem; }
 
 .banner-btn {
-    background: #ffb347;
-    color: #2d1a07;
+    background: #e67e22;
+    color: #fff;
     font-size: 1.1rem;
     font-weight: bold;
     padding: 0.8rem 2rem;
@@ -166,7 +166,7 @@ body {
 }
 
 .banner-btn:hover,
-.banner-btn:focus { background: #e67e22; color: #fff; }
+.banner-btn:focus { background: #d35400; color: #fff; }
 
 /* Featured Foods */
 .featured-foods {
@@ -237,7 +237,7 @@ body {
 }
 
 .action-btn:hover,
-.action-btn:focus { background: #ffb347; color: #e67e22; }
+.action-btn:focus { background: #e67e22; color: #fff; }
 
 /* Food Cards */
 .food-card {
@@ -338,11 +338,11 @@ body {
 
 /* Utilities and Section Backgrounds */
 .location-section,
-.contact-section { background: #ffb347; color: #fff; }
+.contact-section { background: #e67e22; color: #fff; }
 
-.featured-foods h2,
+.featured-foods h2 { color: #e67e22; margin-bottom: 0.7rem; }
 .location-section h2,
-.contact-section h2 { color: #e67e22; margin-bottom: 0.7rem; }
+.contact-section h2 { color: #fff; margin-bottom: 0.7rem; }
 
 .location-section p,
 .contact-section p,
@@ -390,7 +390,7 @@ footer {
     display: block;
     width: 28px;
     height: 3px;
-    background: #ffb347;
+    background: #e67e22;
     border-radius: 2px;
     position: relative;
 }
@@ -401,7 +401,7 @@ footer {
     left: 0;
     width: 28px;
     height: 3px;
-    background: #ffb347;
+    background: #e67e22;
     border-radius: 2px;
 }
 .nav-toggle-label span::before { 
