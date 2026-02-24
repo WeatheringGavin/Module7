@@ -133,7 +133,6 @@ body {
     text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
 }
 
-/* banner buttons and accent removed (not used in markup) */
 
 /* Featured Foods */
 .featured-foods {
@@ -178,7 +177,6 @@ body {
 
 .gallery-img:hover { opacity: 0.9; }
 
-/* figure captions not used in HTML; removed */
 
 .featured-actions { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
 
@@ -429,9 +427,7 @@ footer {
         top: 0;
     }
     .nav-overlay { display: none; }
-    /* Single-label overlay: keep the visible hamburger/X visually anchored by fixing
-       the inner span; use the label's ::before as a full-screen clickable overlay
-       when the menu is open so clicks outside close the menu. */
+
     .nav-toggle-label { position: relative; }
     .nav-toggle-label span {
         display: block;
@@ -462,10 +458,9 @@ footer {
         display: block;
         position: fixed;
         inset: 0;
-        z-index: 10; /* beneath the menu (11) but above page content */
+        z-index: 10;
         background: transparent;
     }
-    /* transform the lines into an X while keeping the visible element anchored */
     #nav-toggle:checked ~ .nav-toggle-label span { background: transparent; }
     #nav-toggle:checked ~ .nav-toggle-label span::before { transform: rotate(45deg); top: 0; }
     #nav-toggle:checked ~ .nav-toggle-label span::after { transform: rotate(-45deg); top: 0; }
