@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
-/*
-  Organized CSS (ordered to match HTML structure):
-  1. Base / Body
-  2. Header (restaurant name, nav, order button)
-  3. Banner
-  4. Featured Foods
-  5. Food Cards
-  6. Location / Map
-  7. Contact Form
-  8. Utilities (links, section backgrounds)
-  9. Footer
-*/
+
 
 /* Base */
 body {
@@ -67,7 +56,7 @@ body {
 
 .order-btn {
     background: #e67e22;
-    color: #fff;
+    color: #2d1a07;
     font-size: 1rem;
     font-weight: bold;
     padding: 0.5rem 1.2rem;
@@ -81,7 +70,7 @@ body {
 .order-btn:hover,
 .order-btn:focus {
     background: #ffb347;
-    color: #2d1a07;
+    color: #ffffff;
 }
 
 /* Banner */
@@ -324,7 +313,7 @@ food-card h3 {
 }
 
 .location-section a,
-.contact-section a { color: #fff; text-decoration: underline; }
+.contact-section a { color: #2d1a07; text-decoration: underline; font-style: italic; }
 
 /* Footer */
 footer { 
