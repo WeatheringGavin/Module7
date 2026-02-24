@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+/*
+  Organized CSS (ordered to match HTML structure):
+  1. Base / Body
+  2. Header (restaurant name, nav, order button)
+  3. Banner
+  4. Featured Foods
+  5. Food Cards
+  6. Location / Map
+  7. Contact Form
+  8. Utilities (links, section backgrounds)
+  9. Footer
+*/
+
+/* Base */
+body {
+    font-family: Arial, sans-serif;
+    background: #fff5e1;
+    color: #2d1a07;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff5e1;
+    min-height: 90px;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    gap: 2rem;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1003;
+}
+
+.restaurant-name {
+    font-family: 'Gochi Hand', cursive, Arial, sans-serif;
+    font-size: 1.7rem;
+    color: #e67e22;
+    text-shadow: 1px 1px 2px #fff5e1;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #ffb347;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+.nav-menu a:hover {
+    border-bottom: 2px solid #e67e22;
+}
+
+.order-btn {
+    background: #e67e22;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+    margin-left: auto;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.order-btn:hover,
+.order-btn:focus {
+    background: #ffb347;
+    color: #e67e22;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    overflow: hidden;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* blurred image layer */
+.banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('images/ayindeabdulmajeed44-spaghetti-6639970_1920.webp') center/cover no-repeat;
+    filter: blur(6px) saturate(1.05);
+    transform: scale(1.03);
+    z-index: 1;
+}
+
+/* color overlay to keep text legible */
+.banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(44, 22, 7, 0.18);
+    z-index: 2;
+}
+
+.banner-text {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem 0;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+.banner-text h1 {
+    font-family: Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px #2d1a07, 0 0 2px #000;
+}
+
+.banner-word.orange { color: #ffb347; }
+.banner-word.white { color: #fff; }
+
+.banner-text .accent {
+    color: #ffb347;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-left: 0.5rem;
+}
+
+.banner-text p {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-top: 0.5rem;
+    text-shadow: 1px 1px 6px #2d1a07;
+}
+
+.banner-buttons { display: flex; gap: 1rem; margin-top: 1.5rem; }
+
+.banner-btn {
+    background: #ffb347;
+    color: #2d1a07;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 2px 8px rgba(44,22,7,0.15);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.banner-btn:hover,
+.banner-btn:focus { background: #e67e22; color: #fff; }
+
+/* Featured Foods */
+.featured-foods {
+    background: #fff5e1;
+    padding: 1rem;
+    max-width: 900px;
+    margin: 1rem auto;
+    border-radius: 8px;
+}
+
+.featured-foods h2 {
+    color: #e67e22;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.food-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    min-width: 0;
+}
+
+.food-gallery figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+}
+
+.gallery-img:hover { opacity: 0.9; }
+
+.food-gallery figcaption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #2d1a07;
+    background: #f7c59f;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.featured-actions { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+
+.action-btn {
+    display: inline-block;
+    background: #e67e22;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.action-btn:hover,
+.action-btn:focus { background: #ffb347; color: #e67e22; }
+
+/* Food Cards */
+.food-card {
+    background: #fff;
+    border-radius: 18px 0 18px 0;
+    border: 5px solid #f7c59f;
+    box-shadow: 0 2px 12px rgba(44,22,7,0.10);
+    padding: 1rem 0.5rem 0.7rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    min-height: 370px;
+    margin: 0.5rem;
+    transition: transform 0.18s, box-shadow 0.18s;
+    text-align: center;
+}
+
+.food-card:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 6px 24px rgba(44,22,7,0.18); }
+
+.food-card h3 {
+    text-align: center;
+    width: 100%;
+    margin: 0.5rem 0 0.2rem 0;
+    color: #e67e22;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.food-card figcaption {
+    margin-top: 0.5rem;
+    font-size: 1.08rem;
+    color: #e67e22;
+    font-weight: bold;
+    text-align: center;
+}
+
+.food-rich-desc {
+    font-size: 0.92rem;
+    color: #000;
+    margin: 0.2rem 0 0.5rem 0;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Location / Map */
+.location-map {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    display: block;
+}
+
+.map-container { margin: 1rem 0 0.5rem 0; border-radius: 8px; overflow: hidden; }
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.contact-form .form-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    gap: 0.7rem;
+}
+
+.contact-form label { min-width: 70px; text-align: left; margin-bottom: 0; }
+
+.contact-form input,
+.contact-form textarea { flex: 1; width: auto; min-width: 0; }
+
+.contact-form label { align-self: flex-start; font-weight: bold; color: #e67e22; }
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+    border: 1px solid #e0c9a6;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #fff;
+    color: #2d1a07;
+}
+
+.contact-form textarea { resize: vertical; }
+.contact-form button { margin-top: 0.5rem; }
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: #777; opacity: 0.8; }
+
+/* Utilities and Section Backgrounds */
+.location-section,
+.contact-section { background: #ffb347; color: #fff; }
+
+.featured-foods h2,
+.location-section h2,
+.contact-section h2 { color: #e67e22; margin-bottom: 0.7rem; }
+
+.location-section p,
+.contact-section p,
+.location-section label,
+.contact-section label,
+.location-section h3,
+.contact-section h3 { color: #fff; }
+
+.location-section,
+.contact-section {
+    max-width: 700px;
+    margin: 2rem auto 1rem auto;
+    padding: 1.5rem 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(44,22,7,0.07);
+    text-align: center;
+}
+
+.location-section a,
+.contact-section a { color: #fff; text-decoration: underline; }
+
+/* Footer */
+footer { 
+    background: #f7c59f;
+    color: #2d1a07;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    margin-top: 2rem; 
+}
+
+
+/* CSS-only hamburger navigation */
+
+.nav-toggle {
+    display: none;
+}
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+}
+.nav-toggle-label span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #ffb347;
+    border-radius: 2px;
+    position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 28px;
+    height: 3px;
+    background: #ffb347;
+    border-radius: 2px;
+}
+.nav-toggle-label span::before { 
+    top: -8px;
+}
+.nav-toggle-label span::after  { 
+    top: 8px;
+}
+
+/* Responsive rules */
+@media (max-width: 720px) {
+    .food-gallery {
+        flex-wrap: wrap;
+        padding: 0 0.5rem;
+    }
+    .food-card {
+        width: 100%;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .banner {
+        min-height: 420px;
+        background-position: center top;
+    }
+    .nav-toggle-label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 8px;
+    }
+    .header-bar {
+        position: relative;
+        z-index: 10;
+    }
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        padding: 6px 0;
+        margin: 0;
+        list-style: none;
+    }
+    .nav-menu ul {
+        position: absolute;
+        top: calc(100% + 6px);
+        right: 1rem;
+        background: #fff5e1;
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(44,22,7,0.12);
+        min-width: 180px;
+        z-index: 11;
+    }
+    .nav-menu a {
+        display: block;
+        padding: .5rem 1rem;
+    }
+    .order-btn {
+        display: inline-block;
+        padding: .75rem 1.4rem;
+        z-index: 12;
+    }
+    #nav-toggle:checked ~ .nav-menu ul {
+        display: flex;
+    }
+    #nav-toggle:checked ~ .nav-toggle-label span {
+        background: transparent;
+    }
+    #nav-toggle:checked ~ .nav-toggle-label span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    #nav-toggle:checked ~ .nav-toggle-label span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    .nav-overlay { 
+        display: none;
+    }
+    #nav-toggle:checked ~ .nav-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: transparent;
+        z-index: 9;
+    }
+}

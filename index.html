@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luigi's Italian Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+            <span class="restaurant-name">Luigi's Italian Restaurant</span>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+            <nav class="nav-menu" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#hiring">Careers</a></li>
+                </ul>
+            </nav>
+            <a href="#order" class="order-btn">Order Now</a>
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+                <span></span>
+            </label>
+            <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+        </div>
+        <div class="banner" role="banner" aria-label="Food banner">
+            <div class="banner-text">
+                <h1>
+                    <span class="banner-word orange">Welcome</span>
+                    <span class="banner-word white">to</span>
+                    <span class="banner-word orange">Luigi's!</span>
+                </h1>
+                <p>Authentic Italian cuisine in an orange cream ambiance.</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="featured-foods" id="featured">
+            <h2>Featured Foods</h2>
+            <div class="food-gallery">
+                <div class="food-card">
+                    <figure>
+                        <img src="images/ritae-pasta-3547078_1280.webp" alt="Delicious pasta" class="gallery-img">
+                        <h3>Pasta Primavera</h3>
+                        <p class="food-rich-desc">Fresh vegetables, light olive oil sauce, and al dente pasta.</p>
+                    </figure>
+                </div>
+                <div class="food-card">
+                    <figure>
+                        <img src="images/joshuemd-pizza-329523_1280.webp" alt="Fresh pizza" class="gallery-img">
+                        <h3>Classic Margherita Pizza</h3>
+                        <p class="food-rich-desc">San Marzano tomatoes, mozzarella, basil, and extra virgin olive oil.</p>
+                    </figure>
+                </div>
+                <div class="food-card">
+                    <figure>
+                        <img src="images/takedahrs-food-1942403_1280.webp" alt="Italian food assortment" class="gallery-img">
+                        <h3>Chef's Special Platter</h3>
+                        <p class="food-rich-desc">A curated selection of our chef's signature Italian dishes.</p>
+                    </figure>
+                </div>
+            </div>
+            <div class="featured-actions">
+                <a href="#menu" class="action-btn">View Menu</a>
+            </div>
+        </section>
+            <section class="location-section" id="location">
+                <h2>Our Location</h2>
+                <p>1234 Pasta Lane, Flavor Town, FT 56789</p>
+                <div class="map-container">
+                <iframe title="Luigi's Location Map" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.128590,51.507351,-0.127758,51.507951&amp;layer=mapnik" class="location-map" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </section>
+            <section class="contact-section" id="contact">
+                <h2>Contact Us</h2>
+                <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a><br>Email: <a href="mailto:info@luigis.com">info@luigis.com</a></p>
+                <form class="contact-form" autocomplete="off">
+                    <div class="form-row">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="action-btn">Send Message</button>
+                </form>
+            </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Luigi's Italian Restaurant. Images: Pixabay</p>
+    </footer>
+</body>
+</html>
